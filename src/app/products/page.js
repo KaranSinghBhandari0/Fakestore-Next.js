@@ -26,6 +26,7 @@ export default function ProductsPage() {
       <h1 className="text-3xl font-bold mb-8 text-center">
         FakeStore <span className="text-orange-500">Products</span>
       </h1>
+      
       <Suspense fallback={<Loader />}>
         <ProductsList />
       </Suspense>

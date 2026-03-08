@@ -1,6 +1,6 @@
 export default function Loader() {
   return (
-    <div className="flex items-center justify-center">
+    <div className="flex items-center justify-center py-10">
       <div className="text-center">
         {/* Spinner */}
         <div className="mb-4">
