@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 
 const Navbar = () => {
@@ -35,6 +37,13 @@ const Navbar = () => {
               className="hover:text-yellow-400 transition duration-200"
             >
               Cart
+            </Link>
+
+            <Link
+              href="/orders"
+              className="hover:text-yellow-400 transition duration-200"
+            >
+              Orders
             </Link>
           </div>
         </div>

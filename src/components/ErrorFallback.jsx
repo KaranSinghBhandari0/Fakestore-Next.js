@@ -1,3 +1,5 @@
+"use client";
+
 export default function ErrorFallback({ error, resetError }) {
   return (
     <div className="flex items-center justify-center mt-4">
