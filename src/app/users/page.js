@@ -3,6 +3,10 @@ import UserCard from "@/components/UserCard";
 import Loader from "@/components/Loader";
 import { getAllUsers } from "@/controllers/usersController";
 
+// Tell Vercel to render on-demand instead of at build time
+export const dynamic = 'force-dynamic';
+export const revalidate = 30; // Revalidate every 30 seconds
+
 // Server Component - Fetches Data
 async function UsersList() {
   const users = await getAllUsers();
