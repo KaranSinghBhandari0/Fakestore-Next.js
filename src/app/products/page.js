@@ -5,16 +5,15 @@ import { getAllProducts } from "@/controllers/productsController";
 
 // Tell Vercel to render on-demand instead of at build time
 export const dynamic = 'force-dynamic';
-export const revalidate = 600; // Revalidate every 10 minutes
 
 // Server Component - Fetches Data
 async function ProductsList() {
-  const products = await getAllProducts();
+  const { products } = await getAllProducts();
 
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
       {products?.map((product) => (
-        <ProductCard product={product} key={product.id} />
+        <ProductCard product={product} key={product._id} />
       ))}
     </div>
   );
